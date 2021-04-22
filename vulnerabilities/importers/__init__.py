@@ -48,3 +48,4 @@ from vulnerabilities.importers.suse_scores import SUSESeverityScoreDataSource
 from vulnerabilities.importers.ubuntu import UbuntuDataSource
 from vulnerabilities.importers.ubuntu_usn import UbuntuUSNDataSource
 from vulnerabilities.importers.istio import IstioDataSource
+from vulnerabilities.importers.mattermost import MattermostDataSource
