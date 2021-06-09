@@ -44,3 +44,9 @@ addopts = [
     "--strict",
     "--doctest-modules"
 ]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+atomic = true
+multi_line_output = 3
