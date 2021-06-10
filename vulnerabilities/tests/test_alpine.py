@@ -22,13 +22,10 @@
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 import os
 from unittest import TestCase
-from unittest.mock import MagicMock
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
+from vulnerabilities.data_source import Advisory, Reference
 from vulnerabilities.importers.alpine_linux import AlpineDataSource
-
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data", "alpine", "v3.11")

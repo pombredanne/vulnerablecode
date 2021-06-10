@@ -31,6 +31,7 @@ from vulnerabilities.importers.debian_oval import DebianOvalDataSource
 from vulnerabilities.importers.elixir_security import ElixirSecurityDataSource
 from vulnerabilities.importers.gentoo import GentooDataSource
 from vulnerabilities.importers.github import GitHubAPIDataSource
+from vulnerabilities.importers.istio import IstioDataSource
 from vulnerabilities.importers.kaybee import KaybeeDataSource
 from vulnerabilities.importers.nginx import NginxDataSource
 from vulnerabilities.importers.npm import NpmDataSource
@@ -46,6 +47,5 @@ from vulnerabilities.importers.safety_db import SafetyDbDataSource
 from vulnerabilities.importers.suse_scores import SUSESeverityScoreDataSource
 from vulnerabilities.importers.ubuntu import UbuntuDataSource
 from vulnerabilities.importers.ubuntu_usn import UbuntuUSNDataSource
-from vulnerabilities.importers.istio import IstioDataSource
 
 # from vulnerabilities.importers.suse_backports import SUSEBackportsDataSource

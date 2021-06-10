@@ -26,9 +26,7 @@ import saneyaml
 from bs4 import BeautifulSoup
 from packageurl import PackageURL
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import DataSourceConfiguration
+from vulnerabilities.data_source import Advisory, DataSource, DataSourceConfiguration
 from vulnerabilities.helpers import create_etag
 
 

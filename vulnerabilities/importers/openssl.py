@@ -22,18 +22,14 @@
 
 import dataclasses
 import re
-from typing import Set
 import xml.etree.ElementTree as ET
+from typing import Set
 
-from packageurl import PackageURL
 import requests
+from packageurl import PackageURL
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import DataSourceConfiguration
-from vulnerabilities.helpers import create_etag
-from vulnerabilities.helpers import nearest_patched_package
+from vulnerabilities.data_source import Advisory, DataSource, DataSourceConfiguration, Reference
+from vulnerabilities.helpers import create_etag, nearest_patched_package
 
 
 @dataclasses.dataclass

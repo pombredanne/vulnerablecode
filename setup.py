@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 
-from setuptools import find_packages
-from setuptools import setup
-
+from setuptools import find_packages, setup
 
 requirements = [
     r.strip() for r in open("requirements.txt") if r.strip() and not r.strip().startswith("#")

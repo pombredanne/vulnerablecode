@@ -23,16 +23,18 @@
 import dataclasses
 import gzip
 import json
-from dateutil import parser as dateparser
 from datetime import date
 
 import requests
+from dateutil import parser as dateparser
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import DataSourceConfiguration
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import VulnerabilitySeverity
+from vulnerabilities.data_source import (
+    Advisory,
+    DataSource,
+    DataSourceConfiguration,
+    Reference,
+    VulnerabilitySeverity,
+)
 from vulnerabilities.helpers import create_etag
 from vulnerabilities.severity_systems import scoring_systems
 

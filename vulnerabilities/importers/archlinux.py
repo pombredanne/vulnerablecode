@@ -22,20 +22,19 @@
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 import dataclasses
 import json
-from typing import Iterable
-from typing import List
-from typing import Mapping
-from typing import Set
+from typing import Iterable, List, Mapping, Set
 from urllib.request import urlopen
 
 from packageurl import PackageURL
-from schema import Regex, Schema, Or
+from schema import Or, Regex, Schema
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import DataSourceConfiguration
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import VulnerabilitySeverity
+from vulnerabilities.data_source import (
+    Advisory,
+    DataSource,
+    DataSourceConfiguration,
+    Reference,
+    VulnerabilitySeverity,
+)
 from vulnerabilities.helpers import nearest_patched_package
 from vulnerabilities.severity_systems import scoring_systems
 

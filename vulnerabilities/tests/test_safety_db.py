@@ -22,17 +22,18 @@
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 import json
 import os
-from unittest.mock import patch
 from unittest import TestCase
+from unittest.mock import patch
 
 from packageurl import PackageURL
 
-from vulnerabilities.importers.safety_db import PypiVersionAPI
-from vulnerabilities.importers.safety_db import categorize_versions
-from vulnerabilities.importers.safety_db import SafetyDbDataSource
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
+from vulnerabilities.data_source import Advisory, Reference
 from vulnerabilities.helpers import AffectedPackage
+from vulnerabilities.importers.safety_db import (
+    PypiVersionAPI,
+    SafetyDbDataSource,
+    categorize_versions,
+)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data", "safety_db")

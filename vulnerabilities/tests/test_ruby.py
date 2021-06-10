@@ -22,18 +22,16 @@
 
 import os
 import pathlib
-from unittest.mock import patch
-from unittest import TestCase
 from collections import OrderedDict
+from unittest import TestCase
+from unittest.mock import patch
 
 from packageurl import PackageURL
 
-from vulnerabilities.importers.ruby import RubyDataSource
-from vulnerabilities.data_source import GitDataSourceConfiguration
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
-from vulnerabilities.package_managers import RubyVersionAPI
+from vulnerabilities.data_source import Advisory, GitDataSourceConfiguration, Reference
 from vulnerabilities.helpers import AffectedPackage
+from vulnerabilities.importers.ruby import RubyDataSource
+from vulnerabilities.package_managers import RubyVersionAPI
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data", "ruby")

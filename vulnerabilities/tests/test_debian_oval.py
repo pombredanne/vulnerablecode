@@ -1,14 +1,13 @@
 import os
 import unittest
-from unittest.mock import patch
 import xml.etree.ElementTree as ET
+from unittest.mock import patch
 
 from packageurl import PackageURL
 
-from vulnerabilities.importers.debian_oval import DebianOvalDataSource
 from vulnerabilities.data_source import Advisory
 from vulnerabilities.helpers import AffectedPackage
-
+from vulnerabilities.importers.debian_oval import DebianOvalDataSource
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data/")

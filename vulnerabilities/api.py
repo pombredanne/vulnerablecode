@@ -28,14 +28,16 @@ from django.urls import reverse
 from django_filters import rest_framework as filters
 from drf_spectacular.utils import extend_schema, inline_serializer
 from packageurl import PackageURL
-
 from rest_framework import serializers, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from vulnerabilities.models import Package
-from vulnerabilities.models import Vulnerability
-from vulnerabilities.models import VulnerabilityReference
-from vulnerabilities.models import VulnerabilitySeverity
+
+from vulnerabilities.models import (
+    Package,
+    Vulnerability,
+    VulnerabilityReference,
+    VulnerabilitySeverity,
+)
 
 # This serializer is used for the bulk apis, to prevent wrong auto documentation
 # TODO: Fix the swagger documentation for bulk apis

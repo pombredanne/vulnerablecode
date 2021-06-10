@@ -23,19 +23,16 @@
 
 import asyncio
 import dataclasses
-from typing import Iterable
-from typing import List
-from typing import Mapping
-from typing import Set
 import xml.etree.ElementTree as ET
+from typing import Iterable, List, Mapping, Set
 
+import requests
 from aiohttp import ClientSession
 from aiohttp.client_exceptions import ClientResponseError, ServerDisconnectedError
-import requests
 
-from vulnerabilities.data_source import OvalDataSource, DataSourceConfiguration
-from vulnerabilities.package_managers import DebianVersionAPI
+from vulnerabilities.data_source import DataSourceConfiguration, OvalDataSource
 from vulnerabilities.helpers import create_etag
+from vulnerabilities.package_managers import DebianVersionAPI
 
 
 @dataclasses.dataclass

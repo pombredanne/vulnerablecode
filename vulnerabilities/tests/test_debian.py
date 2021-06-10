@@ -22,8 +22,7 @@
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 import json
 import os
-from unittest.mock import patch
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock, patch
 
 from django.test import TestCase
 

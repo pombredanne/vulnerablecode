@@ -25,14 +25,12 @@ import asyncio
 import requests
 from bs4 import BeautifulSoup
 from packageurl import PackageURL
-from univers.versions import MavenVersion
 from univers.version_specifier import VersionSpecifier
+from univers.versions import MavenVersion
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import Reference
-from vulnerabilities.package_managers import GitHubTagsAPI
+from vulnerabilities.data_source import Advisory, DataSource, Reference
 from vulnerabilities.helpers import nearest_patched_package
+from vulnerabilities.package_managers import GitHubTagsAPI
 
 GH_PAGE_URL = "https://raw.githubusercontent.com/apache/kafka-site/asf-site/cve-list.html"
 ASF_PAGE_URL = "https://kafka.apache.org/cve-list"

@@ -21,17 +21,15 @@
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 
 import asyncio
-import os
 import json
-from unittest import TestCase
-from unittest.mock import patch
-from unittest.mock import MagicMock, AsyncMock
+import os
 import xml.etree.ElementTree as ET
+from unittest import TestCase
+from unittest.mock import AsyncMock, MagicMock, patch
+
 from aiohttp import test_utils
 
-from vulnerabilities.package_managers import ComposerVersionAPI
-from vulnerabilities.package_managers import MavenVersionAPI
-from vulnerabilities.package_managers import NugetVersionAPI
+from vulnerabilities.package_managers import ComposerVersionAPI, MavenVersionAPI, NugetVersionAPI
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data")

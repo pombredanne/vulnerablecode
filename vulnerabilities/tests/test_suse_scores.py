@@ -23,11 +23,9 @@
 import os
 from unittest import TestCase
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import VulnerabilitySeverity
-from vulnerabilities.importers.suse_scores import SUSESeverityScoreDataSource
+from vulnerabilities.data_source import Advisory, Reference, VulnerabilitySeverity
 from vulnerabilities.helpers import load_yaml
+from vulnerabilities.importers.suse_scores import SUSESeverityScoreDataSource
 from vulnerabilities.severity_systems import ScoringSystem
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

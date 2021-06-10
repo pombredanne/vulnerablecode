@@ -20,10 +20,7 @@
 #  VulnerableCode is a free software tool from nexB Inc. and others.
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import VulnerabilitySeverity
+from vulnerabilities.data_source import Advisory, DataSource, Reference, VulnerabilitySeverity
 from vulnerabilities.helpers import fetch_yaml
 from vulnerabilities.severity_systems import scoring_systems
 

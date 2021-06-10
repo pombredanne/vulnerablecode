@@ -22,11 +22,8 @@
 
 from packageurl import PackageURL
 
-from vulnerabilities.data_source import GitDataSource
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
-from vulnerabilities.helpers import load_yaml
-from vulnerabilities.helpers import nearest_patched_package
+from vulnerabilities.data_source import Advisory, GitDataSource, Reference
+from vulnerabilities.helpers import load_yaml, nearest_patched_package
 
 
 class KaybeeDataSource(GitDataSource):

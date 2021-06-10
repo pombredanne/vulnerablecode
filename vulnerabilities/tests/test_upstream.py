@@ -1,4 +1,5 @@
 import pytest
+
 from vulnerabilities import importers
 from vulnerabilities.importer_yielder import IMPORTER_REGISTRY
 

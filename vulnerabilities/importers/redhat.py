@@ -23,13 +23,14 @@
 import requests
 from packageurl import PackageURL
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import DataSourceConfiguration
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import VulnerabilitySeverity
-from vulnerabilities.helpers import nearest_patched_package
-from vulnerabilities.helpers import requests_with_5xx_retry
+from vulnerabilities.data_source import (
+    Advisory,
+    DataSource,
+    DataSourceConfiguration,
+    Reference,
+    VulnerabilitySeverity,
+)
+from vulnerabilities.helpers import nearest_patched_package, requests_with_5xx_retry
 from vulnerabilities.severity_systems import scoring_systems
 
 

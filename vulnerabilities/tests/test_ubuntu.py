@@ -1,19 +1,16 @@
+import asyncio
 import os
 import unittest
-from unittest.mock import patch
-from unittest.mock import MagicMock
 import xml.etree.ElementTree as ET
 from collections import OrderedDict
-import asyncio
+from unittest.mock import MagicMock, patch
 
 from packageurl import PackageURL
 
-from vulnerabilities.oval_parser import OvalParser
-from vulnerabilities.importers.ubuntu import UbuntuDataSource
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
+from vulnerabilities.data_source import Advisory, Reference
 from vulnerabilities.helpers import AffectedPackage
-
+from vulnerabilities.importers.ubuntu import UbuntuDataSource
+from vulnerabilities.oval_parser import OvalParser
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data/")

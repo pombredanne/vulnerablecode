@@ -25,29 +25,19 @@
 
 import asyncio
 import dataclasses
-import re
 import logging
-from typing import Any
-from typing import Iterable
-from typing import Mapping
-from typing import Set
-from typing import Tuple
+import re
+from typing import Any, Iterable, Mapping, Set, Tuple
 
 import requests
-from univers.version_specifier import VersionSpecifier
-from univers.versions import PYPIVersion
-from univers.versions import InvalidVersion
 from packageurl import PackageURL
-from schema import Or
-from schema import Regex
-from schema import Schema
+from schema import Or, Regex, Schema
+from univers.version_specifier import VersionSpecifier
+from univers.versions import InvalidVersion, PYPIVersion
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import DataSourceConfiguration
-from vulnerabilities.data_source import Reference
-from vulnerabilities.package_managers import PypiVersionAPI
+from vulnerabilities.data_source import Advisory, DataSource, DataSourceConfiguration, Reference
 from vulnerabilities.helpers import nearest_patched_package
+from vulnerabilities.package_managers import PypiVersionAPI
 
 logger = logging.getLogger(__name__)
 

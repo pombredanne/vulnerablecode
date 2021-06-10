@@ -22,22 +22,16 @@
 
 import asyncio
 from itertools import chain
-from typing import Optional
-from typing import List
-from typing import Set
-from typing import Tuple
+from typing import List, Optional, Set, Tuple
 
 import toml
+from packageurl import PackageURL
 from univers.version_specifier import VersionSpecifier
 from univers.versions import SemverVersion
-from packageurl import PackageURL
 
-
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import GitDataSource
-from vulnerabilities.data_source import Reference
-from vulnerabilities.package_managers import CratesVersionAPI
+from vulnerabilities.data_source import Advisory, GitDataSource, Reference
 from vulnerabilities.helpers import nearest_patched_package
+from vulnerabilities.package_managers import CratesVersionAPI
 
 
 class RustDataSource(GitDataSource):

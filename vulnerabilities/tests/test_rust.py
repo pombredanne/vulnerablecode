@@ -25,12 +25,9 @@ from unittest import TestCase
 from packageurl import PackageURL
 from univers.version_specifier import VersionSpecifier
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
-from vulnerabilities.importers.rust import categorize_versions
-from vulnerabilities.importers.rust import get_advisory_data
-from vulnerabilities.importers.rust import RustDataSource
+from vulnerabilities.data_source import Advisory, Reference
 from vulnerabilities.helpers import AffectedPackage
+from vulnerabilities.importers.rust import RustDataSource, categorize_versions, get_advisory_data
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data/rust")

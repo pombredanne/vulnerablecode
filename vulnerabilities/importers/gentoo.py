@@ -26,9 +26,7 @@ from typing import Set
 
 from packageurl import PackageURL
 
-from vulnerabilities.data_source import GitDataSource
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
+from vulnerabilities.data_source import Advisory, GitDataSource, Reference
 from vulnerabilities.helpers import nearest_patched_package
 
 

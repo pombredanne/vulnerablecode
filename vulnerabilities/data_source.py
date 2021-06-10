@@ -27,27 +27,19 @@ import shutil
 import tempfile
 import traceback
 import xml.etree.ElementTree as ET
-from binaryornot.helpers import is_binary_string
 from datetime import datetime
 from pathlib import Path
-from typing import Any
-from typing import ContextManager
-from typing import Iterable
-from typing import List
-from typing import Mapping
-from typing import Optional
-from typing import Set
-from typing import Tuple
-from git import Repo, DiffIndex
+from typing import Any, ContextManager, Iterable, List, Mapping, Optional, Set, Tuple
+
+from binaryornot.helpers import is_binary_string
+from git import DiffIndex, Repo
 from packageurl import PackageURL
 from univers.version_specifier import VersionSpecifier
 from univers.versions import version_class_by_package_type
 
+from vulnerabilities.helpers import AffectedPackage, is_cve, nearest_patched_package
 from vulnerabilities.oval_parser import OvalParser
 from vulnerabilities.severity_systems import ScoringSystem
-from vulnerabilities.helpers import is_cve
-from vulnerabilities.helpers import nearest_patched_package
-from vulnerabilities.helpers import AffectedPackage
 
 logger = logging.getLogger(__name__)
 

@@ -25,12 +25,9 @@ from copy import deepcopy
 from datetime import datetime
 
 from vulnerabilities import models
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import PackageURL
-from vulnerabilities.data_source import Reference
-from vulnerabilities.import_runner import ImportRunner
+from vulnerabilities.data_source import Advisory, DataSource, PackageURL, Reference
 from vulnerabilities.helpers import AffectedPackage
+from vulnerabilities.import_runner import ImportRunner
 
 # from vulnerabilities.import_runner import _insert_vulnerabilities_and_references
 
