@@ -24,8 +24,7 @@ import bisect
 import dataclasses
 import json
 import re
-from typing import Optional
-from typing import List
+from typing import List, Optional
 
 import requests
 import saneyaml

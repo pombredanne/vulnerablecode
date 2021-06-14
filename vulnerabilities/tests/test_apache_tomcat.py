@@ -21,16 +21,14 @@
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 
 import os
-from unittest.mock import MagicMock
-from unittest.mock import patch
 from unittest import TestCase
+from unittest.mock import MagicMock, patch
 
 from packageurl import PackageURL
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
-from vulnerabilities.importers.apache_tomcat import ApacheTomcatDataSource
+from vulnerabilities.data_source import Advisory, Reference
 from vulnerabilities.helpers import AffectedPackage
+from vulnerabilities.importers.apache_tomcat import ApacheTomcatDataSource
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data", "apache_tomcat", "security-9.html")

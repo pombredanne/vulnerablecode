@@ -28,13 +28,9 @@ from collections import OrderedDict
 from packageurl import PackageURL
 
 import vulnerabilities.importers.redhat as redhat
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import VulnerabilitySeverity
-from vulnerabilities.severity_systems import ScoringSystem
-from vulnerabilities.severity_systems import scoring_systems
+from vulnerabilities.data_source import Advisory, Reference, VulnerabilitySeverity
 from vulnerabilities.helpers import AffectedPackage
-
+from vulnerabilities.severity_systems import ScoringSystem, scoring_systems
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data/", "redhat.json")

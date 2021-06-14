@@ -26,12 +26,10 @@ from unittest.mock import patch
 
 from packageurl import PackageURL
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
+from vulnerabilities.data_source import Advisory, Reference
+from vulnerabilities.helpers import AffectedPackage
 from vulnerabilities.importers.nginx import NginxDataSource
 from vulnerabilities.package_managers import GitHubTagsAPI
-from vulnerabilities.helpers import AffectedPackage
-
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data/nginx", "security_advisories.html")

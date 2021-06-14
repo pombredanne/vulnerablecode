@@ -23,12 +23,12 @@
 import importlib
 from datetime import datetime
 
-from django.db import models
 import django.contrib.postgres.fields as pgfields
 from django.core.exceptions import ValidationError
+from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from packageurl.contrib.django.models import PackageURLMixin
 from packageurl import PackageURL
+from packageurl.contrib.django.models import PackageURLMixin
 
 from vulnerabilities.data_source import DataSource
 from vulnerabilities.severity_systems import scoring_systems

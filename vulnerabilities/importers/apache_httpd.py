@@ -27,18 +27,19 @@ import urllib
 import requests
 from bs4 import BeautifulSoup
 from packageurl import PackageURL
-from univers.versions import MavenVersion
 from univers.version_specifier import VersionSpecifier
+from univers.versions import MavenVersion
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import DataSourceConfiguration
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import VulnerabilitySeverity
+from vulnerabilities.data_source import (
+    Advisory,
+    DataSource,
+    DataSourceConfiguration,
+    Reference,
+    VulnerabilitySeverity,
+)
+from vulnerabilities.helpers import create_etag, nearest_patched_package
 from vulnerabilities.package_managers import GitHubTagsAPI
 from vulnerabilities.severity_systems import scoring_systems
-from vulnerabilities.helpers import create_etag
-from vulnerabilities.helpers import nearest_patched_package
 
 
 @dataclasses.dataclass

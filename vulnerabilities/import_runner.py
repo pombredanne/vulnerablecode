@@ -24,18 +24,16 @@
 import dataclasses
 import datetime
 import logging
+import traceback
 from collections import Counter
 from itertools import chain
-import traceback
-from typing import Set
-from typing import Tuple
+from typing import Set, Tuple
 
 from django.core import serializers
 from django.db import transaction
 
 from vulnerabilities import models
-from vulnerabilities.data_source import Advisory, DataSource
-from vulnerabilities.data_source import PackageURL
+from vulnerabilities.data_source import Advisory, DataSource, PackageURL
 
 logger = logging.getLogger(__name__)
 

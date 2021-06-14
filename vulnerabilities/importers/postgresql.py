@@ -21,16 +21,13 @@
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 
 import dataclasses
-
-from bs4 import BeautifulSoup
-from packageurl import PackageURL
-import requests
 import urllib.parse as urlparse
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import VulnerabilitySeverity
+import requests
+from bs4 import BeautifulSoup
+from packageurl import PackageURL
+
+from vulnerabilities.data_source import Advisory, DataSource, Reference, VulnerabilitySeverity
 from vulnerabilities.helpers import nearest_patched_package
 from vulnerabilities.severity_systems import scoring_systems
 

@@ -21,15 +21,14 @@
 #  VulnerableCode is a free software code scanning tool from nexB Inc. and others.
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 
-from datetime import datetime
 import traceback
+from datetime import datetime
 
-from django.core.management.base import BaseCommand
-from django.core.management.base import CommandError
+from django.core.management.base import BaseCommand, CommandError
 
-from vulnerabilities.models import Importer
 from vulnerabilities.import_runner import ImportRunner
 from vulnerabilities.importer_yielder import load_importers
+from vulnerabilities.models import Importer
 
 
 class Command(BaseCommand):

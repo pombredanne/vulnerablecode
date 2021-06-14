@@ -20,20 +20,18 @@
 #  VulnerableCode is a free software from nexB Inc. and others.
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 
-import os
 import json
+import os
 from unittest import TestCase
 
 from packageurl import PackageURL
 from univers.version_specifier import VersionSpecifier
 
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import VulnerabilitySeverity
+from vulnerabilities.data_source import Advisory, Reference, VulnerabilitySeverity
+from vulnerabilities.helpers import AffectedPackage
+from vulnerabilities.importers.apache_httpd import ApacheHTTPDDataSource
 from vulnerabilities.package_managers import GitHubTagsAPI
 from vulnerabilities.severity_systems import scoring_systems
-from vulnerabilities.importers.apache_httpd import ApacheHTTPDDataSource
-from vulnerabilities.helpers import AffectedPackage
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TEST_DATA = os.path.join(BASE_DIR, "test_data", "apache_httpd", "CVE-1999-1199.json")

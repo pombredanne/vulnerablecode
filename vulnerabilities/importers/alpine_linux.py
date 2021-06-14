@@ -21,23 +21,15 @@
 #  VulnerableCode is a free software code scanning tool from nexB Inc. and others.
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 from re import IGNORECASE
-from typing import Any
-from typing import Iterable
-from typing import List
-from typing import Mapping
-from typing import Set
+from typing import Any, Iterable, List, Mapping, Set
 
 import requests
 import saneyaml
 from bs4 import BeautifulSoup
 from packageurl import PackageURL
-from schema import Or
-from schema import Regex
-from schema import Schema
+from schema import Or, Regex, Schema
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import Reference
+from vulnerabilities.data_source import Advisory, DataSource, Reference
 from vulnerabilities.helpers import is_cve
 
 BASE_URL = "https://secdb.alpinelinux.org/"

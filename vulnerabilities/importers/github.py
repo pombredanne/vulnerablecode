@@ -21,32 +21,32 @@
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 
 import asyncio
-import os
 import dataclasses
 import json
-from typing import Set
-from typing import Tuple
-from typing import List
-from typing import Mapping
-from typing import Optional
+import os
+from typing import List, Mapping, Optional, Set, Tuple
 
 import requests
 from packageurl import PackageURL
 from univers.version_specifier import VersionSpecifier
 from univers.versions import version_class_by_package_type
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import DataSourceConfiguration
-from vulnerabilities.data_source import Reference
-from vulnerabilities.data_source import VulnerabilitySeverity
-from vulnerabilities.package_managers import MavenVersionAPI
-from vulnerabilities.package_managers import NugetVersionAPI
-from vulnerabilities.package_managers import ComposerVersionAPI
-from vulnerabilities.package_managers import PypiVersionAPI
-from vulnerabilities.package_managers import RubyVersionAPI
-from vulnerabilities.severity_systems import scoring_systems
+from vulnerabilities.data_source import (
+    Advisory,
+    DataSource,
+    DataSourceConfiguration,
+    Reference,
+    VulnerabilitySeverity,
+)
 from vulnerabilities.helpers import nearest_patched_package
+from vulnerabilities.package_managers import (
+    ComposerVersionAPI,
+    MavenVersionAPI,
+    NugetVersionAPI,
+    PypiVersionAPI,
+    RubyVersionAPI,
+)
+from vulnerabilities.severity_systems import scoring_systems
 
 # set of all possible values of first '%s' = {'MAVEN','COMPOSER', 'NUGET', 'RUBYGEMS', 'PYPI'}
 # second '%s' is interesting, it will have the value '' for the first request,

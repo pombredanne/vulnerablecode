@@ -25,17 +25,13 @@ from urllib.parse import urlencode
 from django.core.paginator import Paginator
 from django.db.models import Count
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.views import View
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
-from django.views.generic.edit import UpdateView
-from django.views.generic.edit import CreateView
-from django.views.generic.edit import DeleteView
 
-
-from vulnerabilities import forms
-from vulnerabilities import models
+from vulnerabilities import forms, models
 from vulnerablecode.settings import ENABLE_CURATION
 
 

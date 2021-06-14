@@ -27,11 +27,8 @@ import json
 import requests
 from packageurl import PackageURL
 
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import Reference
-from vulnerabilities.helpers import create_etag
-from vulnerabilities.helpers import is_cve
+from vulnerabilities.data_source import Advisory, DataSource, Reference
+from vulnerabilities.helpers import create_etag, is_cve
 
 
 @dataclasses.dataclass

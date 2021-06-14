@@ -24,9 +24,9 @@
 from django.contrib import admin
 
 from vulnerabilities.models import (
-    PackageRelatedVulnerability,
     Importer,
     Package,
+    PackageRelatedVulnerability,
     Vulnerability,
     VulnerabilityReference,
     VulnerabilitySeverity,

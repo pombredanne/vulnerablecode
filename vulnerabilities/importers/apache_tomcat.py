@@ -24,19 +24,14 @@ import asyncio
 import dataclasses
 import re
 
-
 import requests
 from bs4 import BeautifulSoup
+from packageurl import PackageURL
 from univers.version_specifier import VersionSpecifier
 from univers.versions import MavenVersion
-from packageurl import PackageURL
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import DataSourceConfiguration
-from vulnerabilities.data_source import Reference
-from vulnerabilities.helpers import create_etag
-from vulnerabilities.helpers import nearest_patched_package
+from vulnerabilities.data_source import Advisory, DataSource, DataSourceConfiguration, Reference
+from vulnerabilities.helpers import create_etag, nearest_patched_package
 from vulnerabilities.package_managers import MavenVersionAPI
 
 

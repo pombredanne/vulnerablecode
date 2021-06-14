@@ -27,19 +27,19 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework import permissions
 from rest_framework.routers import DefaultRouter
 
-
-from vulnerabilities.api import PackageViewSet
-from vulnerabilities.api import VulnerabilityViewSet
-from vulnerabilities.views import HomePage
-from vulnerabilities.views import PackageSearchView
-from vulnerabilities.views import PackageUpdate
-from vulnerabilities.views import PackageCreate
-from vulnerabilities.views import PackageRelatedVulnerablityDelete
-from vulnerabilities.views import PackageRelatedVulnerablityCreate
-from vulnerabilities.views import VulnerabilityDetails
-from vulnerabilities.views import VulnerabilitySearchView
-from vulnerabilities.views import VulnerabilityCreate
-from vulnerabilities.views import VulnerabilityReferenceCreate
+from vulnerabilities.api import PackageViewSet, VulnerabilityViewSet
+from vulnerabilities.views import (
+    HomePage,
+    PackageCreate,
+    PackageRelatedVulnerablityCreate,
+    PackageRelatedVulnerablityDelete,
+    PackageSearchView,
+    PackageUpdate,
+    VulnerabilityCreate,
+    VulnerabilityDetails,
+    VulnerabilityReferenceCreate,
+    VulnerabilitySearchView,
+)
 from vulnerablecode.settings import ENABLE_CURATION
 
 

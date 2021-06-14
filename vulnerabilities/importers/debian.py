@@ -23,23 +23,14 @@
 
 import dataclasses
 import json
-from dateutil import parser as dateparser
-from typing import Any
-from typing import List
-from typing import Mapping
-from typing import Set
+from typing import Any, List, Mapping, Set
 
 import requests
+from dateutil import parser as dateparser
 from packageurl import PackageURL
-from schema import Optional
-from schema import Or
-from schema import Regex
-from schema import Schema
+from schema import Optional, Or, Regex, Schema
 
-from vulnerabilities.data_source import Advisory
-from vulnerabilities.data_source import DataSource
-from vulnerabilities.data_source import DataSourceConfiguration
-from vulnerabilities.data_source import Reference
+from vulnerabilities.data_source import Advisory, DataSource, DataSourceConfiguration, Reference
 from vulnerabilities.helpers import nearest_patched_package
 
 

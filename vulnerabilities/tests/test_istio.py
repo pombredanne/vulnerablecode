@@ -27,9 +27,9 @@ from unittest import TestCase
 from packageurl import PackageURL
 
 from vulnerabilities.data_source import Advisory, Reference
+from vulnerabilities.helpers import AffectedPackage
 from vulnerabilities.importers.istio import IstioDataSource
 from vulnerabilities.package_managers import GitHubTagsAPI
-from vulnerabilities.helpers import AffectedPackage
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 

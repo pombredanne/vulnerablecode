@@ -21,15 +21,12 @@
 #  Visit https://github.com/nexB/vulnerablecode/ for support and download.
 
 import asyncio
-from json import JSONDecodeError
-from typing import Mapping
-from typing import Set
-from typing import List
 import xml.etree.ElementTree as ET
+from json import JSONDecodeError
+from typing import List, Mapping, Set
 
 from aiohttp import ClientSession
-from aiohttp.client_exceptions import ClientResponseError
-from aiohttp.client_exceptions import ServerDisconnectedError
+from aiohttp.client_exceptions import ClientResponseError, ServerDisconnectedError
 
 
 class VersionAPI:

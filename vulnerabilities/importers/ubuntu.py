@@ -25,19 +25,16 @@ import asyncio
 import bz2
 import dataclasses
 import logging
-from typing import Iterable
-from typing import List
-from typing import Mapping
-from typing import Set
 import xml.etree.ElementTree as ET
+from typing import Iterable, List, Mapping, Set
 
+import requests
 from aiohttp import ClientSession
 from aiohttp.client_exceptions import ClientResponseError
-import requests
 
-from vulnerabilities.data_source import OvalDataSource, DataSourceConfiguration
-from vulnerabilities.package_managers import LaunchpadVersionAPI
+from vulnerabilities.data_source import DataSourceConfiguration, OvalDataSource
 from vulnerabilities.helpers import create_etag
+from vulnerabilities.package_managers import LaunchpadVersionAPI
 
 logger = logging.getLogger(__name__)
 
