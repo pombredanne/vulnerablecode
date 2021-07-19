@@ -31,6 +31,7 @@ from typing import Set
 from aiohttp import ClientSession
 from aiohttp.client_exceptions import ClientResponseError
 from aiohttp.client_exceptions import ServerDisconnectedError
+from svn.remote import RemoteClient
 from bs4 import BeautifulSoup
 from dateutil import parser as dateparser
 
@@ -377,41 +378,17 @@ class GitHubTagsAPI(VersionAPI):
 
     package_type = "github"
 
-    async def fetch(self, owner_repo: str, session, endpoint=None) -> None:
+    async def fetch(self, owner_repo: str, session) -> None:
         """
         owner_repo is a string of format "{repo_owner}/{repo_name}"
         Example value of owner_repo = "nexB/scancode-toolkit"
         """
         self.cache[owner_repo] = set()
-        if not endpoint:
-            endpoint = f"https://github.com/{owner_repo}/tags"
-        resp = await session.get(endpoint)
-        resp = await resp.read()
+        endpoint = f"https://github.com/{owner_repo}"
 
-        soup = BeautifulSoup(resp, features="lxml")
-        for release_entry in soup.find_all("div", {"class": "commit"}):
-            version = None
-            for links in release_entry.find_all("a"):
-                if f"/{owner_repo}/releases/tag/" in links["href"].lower():
-                    prefix, _slash, version = links["href"].rpartition("/")
-                    version = version.lstrip("v")
-                    break
-
-            release_date = release_entry.find("relative-time")["datetime"]
-            self.cache[owner_repo].add(
-                Version(value=version, release_date=dateparser.parse(release_date))
-            )
-
-        url = None
-        pagination_links = soup.find("div", {"class": "paginate-container"}).find_all("a")
-        for link in pagination_links:
-            if link.text == "Next":
-                url = link["href"]
-                break
-
-        if url:
-            # FIXME: this could be asynced to improve performance
-            await self.fetch(owner_repo, session, url)
+        tags = RemoteClient(endpoint).list(extended=True, rel_path="tags")
+        for tag in tags:
+            self.cache[owner_repo].add(Version(value=tag["name"], release_date=tag["date"]))
 
 
 class HexVersionAPI(VersionAPI):
